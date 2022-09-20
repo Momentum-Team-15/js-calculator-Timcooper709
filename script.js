@@ -15,29 +15,26 @@ console.log('clear button', clearButton);
 
 clearButton.addEventListener('click', () => {
     display.innerText = "";
-  })
+})
 
-  equalButton.addEventListener('click', (event) => {
+equalButton.addEventListener('click', (event) => {
     let result = eval(display.innerText);
     display.innerText = result;
-  })
+})
 
-  for (let button of opButtons) {
+for (let button of opButtons) {
     console.log('button in operation buttons list', button);
     button.addEventListener("click", (event) => {
-      console.log('inner text of button', button.innerText);
-      console.log('inner text of event target', event.target.innerText);
-      display.innerText += event.target.innerText;
+
+        console.log('inner text of button', button.innerText);
+        console.log('inner text of event target', event.target.innerText);
+        display.innerText += event.target.innerText;
     });
-  }
-  for (let button of numButtons) {
+}
+for (let button of numButtons) {
     // 'do the thing'
     console.log('button in number buttons list', button);
     button.addEventListener("click", (event) => {
-      display.innerText += event.target.innerText;
+        display.innerText += event.target.innerText;
     });
-  }
-  
-
-
-  
+}
